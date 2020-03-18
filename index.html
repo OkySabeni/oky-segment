@@ -1,125 +1,150 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-	<script src="https://cdn.optimizely.com/js/14803270007.js"></script>
-	<script> 
-		//Segment Code
-		!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-		analytics.load("K04qOslQsPu3fLgUGy8Yv3PE9QOnGMQh");
-		analytics.page();
-	       }}();
-	</script>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Questionnaire</title> 
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
-        <link href="default.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-    </head> 
-    <body>
-	 <!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDZMM3W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-        <div id="header-wrapper">
-            <div id="header" class="container">
-                <div id="logo">
-                    <h2><a href="#">Test Site</a></h2>
-                </div>
-            </div>
-        </div>
-        <div id="page-wrapper">
-            <div id="welcome" class="container">
-                <form name="travel" class="form label" onsubmit="identify(event)">
-                    Destination: <input name="destination" class="form input.text" required="" size="81" type="text"/> 
-                    <br><br>
-                    Name: <input name="name" required="" size="75" type="text"/> 
-                    <br><br> 
-                    Email: <input name="email" required="" size="75" type="email"/> 
-                    <br><br>
-                    <input name="submit" class="button button-small" type="submit" value="submit"/>
-                    <br><br>
-                    <button class="button button-small" onclick="myFunction()">Track Event</button>
-                </form>
-		<br><br>
-		<form name="travel2" class="form label" onsubmit="track(event)">
-			Name: <input name="name" required="" size="75" type="text"/> 
-                    	<br><br> 
-                    	Age: <input name="age" required="" size="75" type="number"/> 
-                    	<br><br>
-			Gender: <input name="gender" required="" size="75" type="text"/> 
-                    	<br><br>
-                	<input name="submit" class="button button-small" type="submit" value="submit"/>
-		</form>
-		    <button class="button button-small" onclick="myFunction2()">Identify</button>
-            </div>
-        </div>
-	<script type="text/javascript">
-    		function identify(e){
-        		e.preventDefault();
-        		var form = e.target;
-        		var email = form["email"].value;
-        		var name = form["name"].value;
-        		var destination = form["destination"].value;
-        		var user = {
-            			email: email,
-            			name: name,
-            			destination: destination,
-            			details: details
-        		};
 
-        		analytics.identify(1233456, {
-            			email: email, 
-            			name: name
-        		}, {
-            			'integrations': {
-                		'Salesforce': true,
-                		'Klaviyo': true
-            			}
-			});
+<head>
+  <script src="https://cdn.optimizely.com/js/14803270007.js"></script>
+  <script>
+    //Segment Code
+    ! function() {
+      var analytics = window.analytics = window.analytics || [];
+      if (!analytics.initialize)
+        if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+        else {
+          analytics.invoked = !0;
+          analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"];
+          analytics.factory = function(t) {
+            return function() {
+              var e = Array.prototype.slice.call(arguments);
+              e.unshift(t);
+              analytics.push(e);
+              return analytics
+            }
+          };
+          for (var t = 0; t < analytics.methods.length; t++) {
+            var e = analytics.methods[t];
+            analytics[e] = analytics.factory(e)
+          }
+          analytics.load = function(t, e) {
+            var n = document.createElement("script");
+            n.type = "text/javascript";
+            n.async = !0;
+            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+            var a = document.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(n, a);
+            analytics._loadOptions = e
+          };
+          analytics.SNIPPET_VERSION = "4.1.0";
+          analytics.load("dRj66xjud7xvTTIyo6iZzFh1K5mfAVdQ");
+          analytics.page();
+        }
+    }();
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Questionnaire</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+  <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+</head>
 
-        		analytics.track('Destination Submitted', user, function() {
-            			window.location.href = "";
-        		});
-    		}
-		
-		function track(e){
-        		e.preventDefault();
-        		var form = e.target;
-        		var name = form["name"].value;
-        		var age = form["age"].value;
-        		var gender = form["gender"].value;
-        		var user = {
-            			name: name,
-            			age: age,
-            			gender: gender
-        		};
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDZMM3W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="header-wrapper">
+    <div id="header" class="container">
+      <div id="logo">
+        <h2><a href="#">Test Site</a></h2>
+      </div>
+    </div>
+  </div>
+  <div id="page-wrapper">
+    <div id="welcome" class="container">
+      <form name="travel" class="form label" onsubmit="identify(event)">
+        Destination: <input name="destination" class="form input.text" required="" size="81" type="text" />
+        <br><br> Name: <input name="name" required="" size="75" type="text" />
+        <br><br> Email: <input name="email" required="" size="75" type="email" />
+        <br><br>
+        <input name="submit" class="button button-small" type="submit" value="submit" />
+        <br><br>
+        <button class="button button-small" onclick="myFunction()">Track Event</button>
+      </form>
+      <br><br>
+      <form name="travel2" class="form label" onsubmit="track(event)">
+        Name: <input name="name" required="" size="75" type="text" />
+        <br><br> Age: <input name="age" required="" size="75" type="number" />
+        <br><br> Gender: <input name="gender" required="" size="75" type="text" />
+        <br><br>
+        <input name="submit" class="button button-small" type="submit" value="submit" />
+      </form>
+      <button class="button button-small" onclick="myFunction2()">Identify</button>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function identify(e) {
+      e.preventDefault();
+      var form = e.target;
+      var email = form["email"].value;
+      var name = form["name"].value;
+      var destination = form["destination"].value;
+      var user = {
+        email: email,
+        name: name,
+        destination: destination,
+        details: details
+      };
 
-        		analytics.identify(13444, {
-            			firstName: "Jason", 
-				lastName: "Martin",
-				gender: gender
-			});
+      analytics.identify('oky-0318-1', {
+        email: email,
+        name: name
+      });
 
-        		analytics.track('Signed Up', user, function() {
-            			window.location.href = "";
-        		});
-    		}
-    
-    		function myFunction() {
-        		analytics.track('Form Submitted', {
-            			form_name: "About Me",
-				revenue: 50
-    			});
-		}
-		
-    		function myFunction2() {
-        		var userId = '023bkj2131kj2h3125';
-			analytics.identify(userId, {
-				email: 'steve@segment.com'
-			},function(){window.appboy.changeUser(userId);});
-			
-		}
-	</script>   
-</body> 
+      analytics.track('Test Completed', user, function() {
+        window.location.href = "";
+      });
+    }
+
+    function track(e) {
+      e.preventDefault();
+      var form = e.target;
+      var name = form["name"].value;
+      var age = form["age"].value;
+      var gender = form["gender"].value;
+      var user = {
+        name: name,
+        age: age,
+        gender: gender
+      };
+
+      analytics.identify('oky-0318-2', {
+        firstName: "Jason",
+        lastName: "Martin",
+        gender: gender
+      });
+
+      analytics.track('Signed Up', user, function() {
+        window.location.href = "";
+      });
+    }
+
+    // what does this function do? does it just fire immediately?
+    // function myFunction() {
+    //   analytics.track('Form Submitted', {
+    //     form_name: "About Me",
+    //     revenue: 50
+    //   });
+    // }
+    //
+    // function myFunction2() {
+    //   var userId = '023bkj2131kj2h3125';
+    //   analytics.identify(userId, {
+    //     email: 'steve@segment.com'
+    //   }, function() {
+    //     window.appboy.changeUser(userId);
+    //   });
+    // }
+  </script>
+</body>
+
 </html>
